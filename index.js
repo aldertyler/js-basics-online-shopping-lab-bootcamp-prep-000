@@ -72,8 +72,9 @@ function removeFromCart(item) {
 }
 function placeOrder(cardNumber) {
   if (cardNumber) {
-    
-    console.log (`Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`); 
+     while (cart.length > 0){
+    cart.pop();
+    return(`Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`); 
    
   }
   } else {
