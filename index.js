@@ -9,7 +9,7 @@ function setCart(c) {
   return cart;
 }
 
-function addToCart(itemName) {
+function addToCart(item) {
   var price = Math.floor(Math.random() * 100);
   var obj = {'itemName': `${item}`, 'itemPrice': price};
   cart.push(obj);
