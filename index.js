@@ -40,8 +40,7 @@ return message.join(', ');
   }
 
 function total() {
-  // write your code here
-}
+  return 
 
 function removeFromCart(item) {
   // write your code here
