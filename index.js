@@ -49,16 +49,26 @@ function total() {
 
 
 function removeFromCart(item) {
-  for (var i = 0; i <cart.length; i++) {
-    if (cart[i].hasOwnProperty(item)) {
-      cart.splice(i, 1)
-      return cart
-    }else {
-  
-  console.log('That item is not in your cart.')
-  return cart
+  cart = getCart();
+  var lim = cart.length;
+  var count = 0;
+  var have = 0;
+  while (lim > 0) {
+  var string = `${cart[count].itemName}`;
+    if (string ===`${item}`) {
+    cart = cart.slice(0,count).concat(cart.slice(count+1))
+    count = count;
+    lim -= 1;
+    have = 1;
     }
-}
+    else {
+      count += 1;
+      lim -= 1;
+    }
+  }
+      if (have === 0) {
+      return 'That item is not in your cart.'
+      }
 }
 function placeOrder(cardNumber) {
   // write your code here
