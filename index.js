@@ -40,18 +40,11 @@ return message.join(', ');
   }
 
 function total() {
-  var pricePerItemInCart = [];
-  var totalPrice = 0
-  
-  for(var i = 0; i < cart.length; i++) {
-  var itemPrice = cart[i][Object.keys(cart[i])];
-    pricePerItemInCart.push(itemPrice);
-    }
-  
-  for (var j =0; j<pricePerItemInCart.length; j++) {
-    totalPrice = pricePerItemInCart[j]+=totalPrice;
+ var sum = 0;
+  for (var i = 0; i < cart.length; i++) {
+    sum = sum + cart[i].itemPrice;
   }
-  return totalPrice;
+  return sum;
 }
 
 
