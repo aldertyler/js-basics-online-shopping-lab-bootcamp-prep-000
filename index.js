@@ -76,7 +76,7 @@ function placeOrder(cardNumber) {
   } else {
    return ("Sorry, we don't have a credit card on file for you.");
   }
-  while (cart.length> 0){
+  while (cart.length > 0){
     cart.pop();
   }
     
