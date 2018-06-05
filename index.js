@@ -22,7 +22,7 @@ function addToCart(item) {
     return 'Your shopping cart is empty.';
   } else {
   for (let i = 0; i < cart.length; i++) {
-  if (i===0) {
+  if (i === 0) {
     message[i] = `In your cart, you have ${cart[i].itemName} at $${cart[i].itemPrice}`;
     if (cart.length < 2) {
     message[i] = `${message[i]}.`;
